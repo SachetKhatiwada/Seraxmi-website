@@ -65,15 +65,18 @@ const Hero = () => {
     message: string;
   }
 
-  interface InputChangeEvent extends React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement> { }
 
-  const handleInputChange = (e: InputChangeEvent) => {
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev: FormData) => ({
       ...prev,
       [name]: value
     }));
   };
+
 
   const handleSubmit = async () => {
     if (!isFormValid) return;
@@ -136,7 +139,7 @@ const Hero = () => {
       )}
 
       {/* Hero Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div className=" inset-0 z-0 relative">
         <Image
           src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2000&q=80"
           alt="Professional team working on digital solutions"

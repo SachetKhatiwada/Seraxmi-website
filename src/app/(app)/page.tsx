@@ -1,23 +1,6 @@
 "use client";
-import React, { useState, useEffect, useRef } from 'react';
-import {
+import React from 'react';
 
-
-  Code,
-  Smartphone,
-  Brain,
-  Shield,
-  TrendingUp,
-  Mail,
-  Phone,
-  MapPin,
-  Star,
-  Users,
-  Award,
-  Zap,
-
-
-} from 'lucide-react';
 
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';

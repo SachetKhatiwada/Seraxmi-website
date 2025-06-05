@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { CheckCircle, Mail, Play, ArrowRight, Shield, DollarSign, User, MessageSquare, Globe, X } from 'lucide-react';
+import Image from 'next/image';
 
 const Hero = () => {
   const [formData, setFormData] = useState({
@@ -139,7 +140,7 @@ const Hero = () => {
 
       {/* Hero Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2000&q=80"
           alt="Professional team working on digital solutions"
           className="w-full h-full object-cover opacity-10"

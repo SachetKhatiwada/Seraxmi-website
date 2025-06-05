@@ -11,6 +11,7 @@ import {
   ChevronRight
 
 } from 'lucide-react';
+import Image from 'next/image';
 const ShowTestimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState<'left' | 'right'>('right');
@@ -209,7 +210,7 @@ const ShowTestimonial = () => {
                     </div>
                     <div className="relative z-10 text-center">
                       <div className="w-24 h-24 rounded-full border-4 border-white/20 mb-6 mx-auto overflow-hidden">
-                        <img
+                        <Image
                           src={testimonials[currentIndex].avatar}
                           alt={testimonials[currentIndex].name}
                           className="w-full h-full object-cover"
@@ -294,7 +295,7 @@ const ShowTestimonial = () => {
                 <div className="bg-white rounded-2xl shadow-lg p-8 h-full">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-blue-100">
-                      <img
+                      <Image
                         src={testimonial.avatar}
                         alt={testimonial.name}
                         className="w-full h-full object-cover"

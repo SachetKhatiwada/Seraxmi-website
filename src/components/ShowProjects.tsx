@@ -1,5 +1,6 @@
 import React from 'react'
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image'
 const ShowProjects = () => {
     const projects = [
     {
@@ -56,11 +57,12 @@ const ShowProjects = () => {
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <div className="relative overflow-hidden h-64">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
+          <Image
+  src={project.image}
+  alt={project.title}
+  fill
+  className="object-cover transition-transform duration-700 group-hover:scale-110"
+/>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                     <div className="text-white">
                       <div className="flex flex-wrap gap-2 mb-3">

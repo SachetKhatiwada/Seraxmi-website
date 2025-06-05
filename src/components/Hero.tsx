@@ -259,27 +259,28 @@ const Hero = () => {
                 </div>
 
                 {/* Budget Field */}
-                <div className="group">
-                  <div className="relative">
-                    <DollarSign className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-blue-500 transition-colors duration-300" />
-                    <select
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleInputChange}
-                      className="w-full pl-12 pr-5 py-4 bg-gray-50/80 border border-gray-200 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none focus:bg-white transition-all duration-300 group-hover:border-gray-300 appearance-none cursor-pointer"
-                      required
-                    >
-                      <option value="" disabled selected>Select Your Budget</option>
-                      <option value="5k-10k">$5K - $10K</option>
-                      <option value="10k-25k">$10K - $25K</option>
-                      <option value="25k-50k">$25K - $50K</option>
-                      <option value="50k-100k">$50K - $100K</option>
-                      <option value="100k+">$100K+</option>
-                      <option value="discuss">Let's Discuss</option>
-                    </select>
-                    <ArrowRight className="absolute right-4 top-4 w-5 h-5 text-gray-400 rotate-90 pointer-events-none" />
-                  </div>
-                </div>
+{/* Budget Field */}
+<div className="group">
+  <div className="relative">
+    <DollarSign className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-blue-500 transition-colors duration-300" />
+    <select
+      name="budget"
+      value={formData.budget}
+      onChange={handleInputChange}
+      className="w-full pl-12 pr-5 py-4 bg-gray-50/80 border border-gray-200 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none focus:bg-white transition-all duration-300 group-hover:border-gray-300 appearance-none cursor-pointer"
+      required
+    >
+      <option value="" disabled>Select Your Budget</option>
+      <option value="5k-10k">$5K - $10K</option>
+      <option value="10k-25k">$10K - $25K</option>
+      <option value="25k-50k">$25K - $50K</option>
+      <option value="50k-100k">$50K - $100K</option>
+      <option value="100k+">$100K+</option>
+      <option value="discuss">Let's Discuss</option>
+    </select>
+    <ArrowRight className="absolute right-4 top-4 w-5 h-5 text-gray-400 rotate-90 pointer-events-none" />
+  </div>
+</div>
 
                 {/* Message Field */}
                 <div className="group">

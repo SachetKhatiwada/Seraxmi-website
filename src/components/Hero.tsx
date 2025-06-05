@@ -11,7 +11,6 @@ const Hero = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
 
   const features: string[] = [
@@ -58,7 +57,6 @@ const Hero = () => {
     "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe",
   ];
 
-
   interface FormData {
     name: string;
     email: string;
@@ -94,7 +92,6 @@ const Hero = () => {
     await new Promise(resolve => setTimeout(resolve, 1500));
 
     setIsSubmitting(false);
-    setIsSubmitted(true);
     setShowSuccessPopup(true);
 
     // Reset form after submission
@@ -126,7 +123,7 @@ const Hero = () => {
                 <CheckCircle className="w-8 h-8 text-green-600" />
               </div>
               <h4 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h4>
-              <p className="text-gray-600 mb-6">We'll get back to you within 24 hours.</p>
+              <p className="text-gray-600 mb-6">We&apos;ll get back to you within 24 hours.</p>
               <button
                 onClick={() => setShowSuccessPopup(false)}
                 className="px-6 py-3 bg-blue-600 text-white rounded-xl font-medium hover:bg-blue-700 transition-colors"
@@ -143,7 +140,8 @@ const Hero = () => {
         <Image
           src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2000&q=80"
           alt="Professional team working on digital solutions"
-          className="w-full h-full object-cover opacity-10"
+          fill
+          className="object-cover opacity-10"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/10 to-pink-600/20"></div>
       </div>
@@ -163,7 +161,7 @@ const Hero = () => {
 
             <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-2xl font-light">
               We empower ambitious businesses with cutting-edge digital solutions that drive exponential growth,
-              increase revenue, and create lasting competitive advantages in today's digital landscape.
+              increase revenue, and create lasting competitive advantages in today&apos;s digital landscape.
             </p>
 
             {/* Enhanced Features Grid */}
@@ -203,7 +201,7 @@ const Hero = () => {
                   <Mail className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-3">Get Your Free Quote</h3>
-                <p className="text-gray-600 text-lg">Ready to accelerate your growth? Let's discuss your vision</p>
+                <p className="text-gray-600 text-lg">Ready to accelerate your growth? Let&apos;s discuss your vision</p>
               </div>
 
               <div className="space-y-6">
@@ -260,28 +258,27 @@ const Hero = () => {
                 </div>
 
                 {/* Budget Field */}
-{/* Budget Field */}
-<div className="group">
-  <div className="relative">
-    <DollarSign className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-blue-500 transition-colors duration-300" />
-    <select
-      name="budget"
-      value={formData.budget}
-      onChange={handleInputChange}
-      className="w-full pl-12 pr-5 py-4 bg-gray-50/80 border border-gray-200 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none focus:bg-white transition-all duration-300 group-hover:border-gray-300 appearance-none cursor-pointer"
-      required
-    >
-      <option value="" disabled>Select Your Budget</option>
-      <option value="5k-10k">$5K - $10K</option>
-      <option value="10k-25k">$10K - $25K</option>
-      <option value="25k-50k">$25K - $50K</option>
-      <option value="50k-100k">$50K - $100K</option>
-      <option value="100k+">$100K+</option>
-      <option value="discuss">Let's Discuss</option>
-    </select>
-    <ArrowRight className="absolute right-4 top-4 w-5 h-5 text-gray-400 rotate-90 pointer-events-none" />
-  </div>
-</div>
+                <div className="group">
+                  <div className="relative">
+                    <DollarSign className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-blue-500 transition-colors duration-300" />
+                    <select
+                      name="budget"
+                      value={formData.budget}
+                      onChange={handleInputChange}
+                      className="w-full pl-12 pr-5 py-4 bg-gray-50/80 border border-gray-200 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none focus:bg-white transition-all duration-300 group-hover:border-gray-300 appearance-none cursor-pointer"
+                      required
+                    >
+                      <option value="" disabled>Select Your Budget</option>
+                      <option value="5k-10k">$5K - $10K</option>
+                      <option value="10k-25k">$10K - $25K</option>
+                      <option value="25k-50k">$25K - $50K</option>
+                      <option value="50k-100k">$50K - $100K</option>
+                      <option value="100k+">$100K+</option>
+                      <option value="discuss">Let&apos;s Discuss</option>
+                    </select>
+                    <ArrowRight className="absolute right-4 top-4 w-5 h-5 text-gray-400 rotate-90 pointer-events-none" />
+                  </div>
+                </div>
 
                 {/* Message Field */}
                 <div className="group">

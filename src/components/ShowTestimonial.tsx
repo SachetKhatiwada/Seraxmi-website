@@ -153,7 +153,7 @@ const ShowTestimonial = () => {
             viewport={{ once: true }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            Don't just take our word for it. Hear how we've helped businesses achieve remarkable digital transformations.
+            {"Don't just take our word for it. Hear how we've helped businesses achieve remarkable digital transformations."}
           </motion.p>
         </div>
 
@@ -191,7 +191,7 @@ const ShowTestimonial = () => {
                   <div className="md:w-2/3 p-10 relative flex flex-col justify-center">
                     <Quote className="absolute top-10 right-10 w-10 h-10 text-gray-200" />
                     <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed italic font-light mb-8">
-                      "{testimonials[currentIndex].text}"
+                      {`"${testimonials[currentIndex].text}"`}
                     </p>
                     <div className="flex items-center space-x-4">
                       <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
@@ -263,7 +263,7 @@ const ShowTestimonial = () => {
                     ))}
                   </div>
                   <Quote className="w-6 h-6 text-gray-300 mb-4" />
-                  <p className="text-gray-700 mb-6 italic leading-relaxed">"{t.text}"</p>
+                  <p className="text-gray-700 mb-6 italic leading-relaxed">{`"${t.text}"`}</p>
                 </div>
               </div>
             ))}
